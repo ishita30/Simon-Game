@@ -16,8 +16,6 @@ function()
   var userChosenColour= $(this).attr("id");
   userClickedPattern.push(userChosenColour);
   playSound(userChosenColour);
-
-
 }
 );
 function playSound(name)
@@ -28,8 +26,14 @@ function playSound(name)
 function animatePress(currentColour)
 {
   $("#" + currentColour).addClass(pressed);
-  setTimeout(function(){
+  setTimeout(function()
+ {
 
-  $("#" + currentColor).removeClass("pressed");
+ $("#" + currentColor).removeClass("pressed");
 }, 100);
 }
+$(document).keypress(function()
+{
+
+}
+);
